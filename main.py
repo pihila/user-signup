@@ -42,6 +42,16 @@ def register():
         for char in email:
             if char==" ":
                 emailError = "email can't contain spaces"
+
+    if len(username) < 8:
+        usernameError = "user name must be at least 8 characters long"
+    elif len(username) > 20:
+        usernameError = "username must be shorter then 20 characters"
+    else:
+        hasSpace = False
+        for char in username:
+            if char==" ":
+                usernameError = "user name can't contain spaces"
     if len(password) < 8:
         passwordError = "Password must be at least 8 characters long"
     elif len(password) > 20:
